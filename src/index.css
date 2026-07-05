@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+
+  --color-emerald-950: #002117;
+  --color-emerald-900: #003527;
+  --color-emerald-800: #064e3b;
+  --color-emerald-700: #0b513d;
+  --color-emerald-600: #2b6954;
+  --color-emerald-500: #2b6954;
+  --color-emerald-400: #80bea6;
+  --color-emerald-200: #b0f0d6;
+  --color-emerald-100: #95d3ba;
+  --color-gold-200: #ffe088;
+  --color-gold-300: #fed65b;
+  --color-gold-400: #e9c349;
+  --color-gold-500: #735c00;
+  --color-accent-gold: #fed65b;
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .glass-card-emerald {
+    background: rgba(6, 78, 59, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(6, 78, 59, 0.15);
+  }
+
+  .tonal-glow {
+    box-shadow: 0 0 40px rgba(6, 78, 59, 0.05);
+  }
+
+  .arabesque-pattern {
+    background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+    opacity: 0.04;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(149, 211, 186, 0.5); }
+  70% { box-shadow: 0 0 0 20px rgba(149, 211, 186, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(149, 211, 186, 0); }
+}
+
+.active-alignment {
+  animation: pulse-glow 2s infinite;
+  border-color: #95d3ba !important;
+}
+
+.active-prayer-gradient {
+  background: linear-gradient(135deg, #064e3b 0%, #0b513d 100%);
+}
