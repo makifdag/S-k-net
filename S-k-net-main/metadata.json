@@ -1,0 +1,6 @@
+{
+  "name": "Sükûnet",
+  "description": "Namaz Vakitleri, Kıble Pusulası, Zikirmatik ve Günlük Dualar içeren manevi sükûnet rehberi.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
